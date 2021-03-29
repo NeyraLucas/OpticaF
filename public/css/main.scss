@@ -1,0 +1,215 @@
+@import 'config';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700&display=swap');
+
+@function size($value){
+    @return $value * $unit;
+}
+
+@mixin reset-pm{
+    padding: 0;
+    margin: 0;
+}
+
+@mixin img-mov {
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    //background-size: cover;
+   //background-position: center;
+    background-attachment: fixed;
+    position:  relative;
+    overflow: hidden;
+    padding: 25px;
+}
+
+*{
+    @include reset-pm();
+}
+
+body{
+    font-family: "Roboto";
+}
+
+h1{
+    font-weight: bolder;
+    font-size: size(7);
+}
+
+h5{
+    margin: 0 !important;
+    font-weight: bolder;
+    color: white;
+}
+
+
+
+.container-flex{
+    padding: 0 2rem;
+}
+
+.img{
+    width: 400px;
+}
+
+.wave-container {
+    position: relative;
+    background: #09F;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+  }
+
+.flex-content{
+    display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.hero{
+    background-image: linear-gradient(to top, rgba(48, 208, 208, 0.698) 0%, rgba(51, 8, 103, 0.774) 100%), url(../img/Opto.jpg);
+    width: 100%;
+    height: 550px;
+
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    //background-size: cover;
+   //background-position: center;
+    background-attachment: fixed;
+    position:  relative;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.textos-hero{
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        font-size: size(3);
+    }
+
+    a{
+        display: inline-block;
+        text-decoration: none;
+        padding: 12px 15px;
+        background-color: $primary-color;
+        border-radius: 10px; 
+        color: white;
+        box-shadow: $box-shadow;
+    }
+}
+
+.text-primary{
+    color: $primary-color;
+}
+
+ul{
+    list-style: none;
+
+    li{
+        font-size: size(5);
+        font-weight: bolder;
+        color: $fondo;
+        
+    }
+}
+
+.color-contenedor{
+    
+    //background-image: linear-gradient(to right, rgba(79, 172, 254, 0.438) 0%, rgba(0, 241, 254, 0.322) 100%), url(../img/Nina.jpg);
+    background-image: linear-gradient(135deg, rgba(102, 126, 234, 0.612) 0%, rgba(118, 75, 162, 0.699) 100%), url(../img/Nina.jpg);
+    @include img-mov();
+
+    
+}
+
+.colum-text{
+    margin-top: 25px;
+
+    h1{
+        color: white;
+    }
+}
+
+footer{
+    color: white;
+    background-color: $primary-color;
+}
+
+//320
+@media screen and (max-width: $small-screen-min-width){
+    h1{
+        font-size: 10px;
+    }
+    p{
+        font-size: size(1);
+    }
+    .hero{
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+//568px
+@media screen and (max-width: $small-screen-max-width){
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: size(2);
+    }
+    .hero{
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+//768px
+@media screen and (max-width: $medium-screen-min-width){
+    .hero{
+        width: 100%;
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .textos-hero{
+        height: 350px;
+    }
+}
+
+//1024px
+@media screen and (max-width: $medium-screen-max-width){
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: size(2);
+    }
+
+    li{
+        font-size: size(2.5) !important;
+        
+    }
+
+}
