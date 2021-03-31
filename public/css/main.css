@@ -119,6 +119,7 @@ ul li {
   background-image: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
@@ -146,8 +147,21 @@ footer {
     font-size: 8px;
   }
   .hero {
+    /* width: 100% !important;
+        height: 400px !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-position: center;  */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+  }
+  .frameUx {
+    width: 200px !important;
+  }
+  .color-contenedor {
+    background-size: contain !important;
   }
 }
 
@@ -162,6 +176,9 @@ footer {
     background-size: cover;
     background-position: center;
   }
+  .frameUx {
+    width: 350px !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -173,6 +190,9 @@ footer {
   }
   .textos-hero {
     height: 350px;
+  }
+  .frameUx {
+    width: 500px !important;
   }
 }
 

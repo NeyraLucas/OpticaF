@@ -21,7 +21,7 @@
     background-size: cover;
 
     background-repeat: no-repeat;
-    //background-size: cover;
+    background-size:cover;
    //background-position: center;
     background-attachment: fixed;
     position:  relative;
@@ -47,7 +47,6 @@ h5{
     font-weight: bolder;
     color: white;
 }
-
 
 
 .container-flex{
@@ -155,6 +154,8 @@ footer{
     background-color: $primary-color;
 }
 
+
+
 //320
 @media screen and (max-width: $small-screen-min-width){
     h1{
@@ -164,8 +165,21 @@ footer{
         font-size: size(1);
     }
     .hero{
-        background-size: cover;
-        background-position: center;
+        /* width: 100% !important;
+        height: 400px !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-position: center;  */  
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;     
+    }
+    .frameUx{
+        width: 200px !important;
+    }
+    .color-contenedor{
+        background-size:contain !important;
     }
 
 }
@@ -182,6 +196,9 @@ footer{
         background-size: cover;
         background-position: center;
     }
+    .frameUx{
+        width: 350px !important;
+    }
 }
 
 //768px
@@ -195,6 +212,10 @@ footer{
 
     .textos-hero{
         height: 350px;
+    }
+
+    .frameUx{
+        width: 500px !important;
     }
 }
 
